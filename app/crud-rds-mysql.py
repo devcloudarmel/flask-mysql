@@ -1,8 +1,19 @@
 from flask import Flask, request, jsonify
 import mysql.connector
 from connection import config
+import logging
+
 
 app = Flask(__name__)
+logging.basicConfig(filename='access.log', level=logging.INFO, 
+                    format='%(asctime)s [%(levelname)s] %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+access_logger = logging.getLogger('access_logger')
+
+@app.before_request
+def log_request_info():
+    log_data = f"{request.remote_addr} - {request.method} {request.path} - {request.user_agent}"
+    access_logger.info(log_data)
+
 
 # MySQL connection configuration
 # config = {
@@ -93,5 +104,5 @@ def delete_book(book_id):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
