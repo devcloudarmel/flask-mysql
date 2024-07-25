@@ -40,4 +40,4 @@ jobs:
         # Add your deployment commands here
         # For example, you might use a script to deploy your Flask app
         pwd
-        python ./app/flask.sh
+        python ./app/app.py
