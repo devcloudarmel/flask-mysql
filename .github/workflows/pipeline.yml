@@ -28,4 +28,4 @@ jobs:
           # Add your deployment commands here
           # For example, you might use a script to deploy your Flask app
           pwd
-          python3 ./app/crud-rds-mysql.py
+          python3 ./crud-rds-mysql.py

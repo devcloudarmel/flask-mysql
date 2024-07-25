@@ -48,21 +48,6 @@ def get_books():
     connection.close()
     return jsonify(books_list)
 
-@app.route('/remove', methods=['GET'])
-def get_books():
-    connection = get_db_connection()
-    with connection.cursor() as cursor:
-        select_query = "SELECT * FROM mybook"
-        cursor.execute(select_query)
-        books = cursor.fetchall()
-
-    books_list = [
-        {'id': book[0], 'author': book[1], 'title': book[2], 'isbn': book[3]}
-        for book in books
-    ]
-    connection.close()
-    return jsonify(books_list)
-
 @app.route('/books', methods=['POST'])
 def add_book():
     book_data = request.get_json()
