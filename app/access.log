@@ -14,3 +14,21 @@
 2024-07-18 07:08:27 [INFO] 172.18.0.1 - - [18/Jul/2024 07:08:27] "[33mGET /mybooks HTTP/1.1[0m" 404 -
 2024-07-18 07:08:31 [INFO] 172.18.0.1 - GET /books - Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
 2024-07-18 07:08:31 [INFO] 172.18.0.1 - - [18/Jul/2024 07:08:31] "GET /books HTTP/1.1" 200 -
+2024-07-25 11:38:02 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.179:5000
+2024-07-25 11:38:02 [INFO] [33mPress CTRL+C to quit[0m
+2024-07-25 11:38:02 [INFO]  * Restarting with stat
+2024-07-25 11:38:06 [WARNING]  * Debugger is active!
+2024-07-25 11:38:06 [INFO]  * Debugger PIN: 848-406-356
+2024-07-25 11:38:07 [INFO] 127.0.0.1 - GET / - Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+2024-07-25 11:38:07 [INFO] 127.0.0.1 - - [25/Jul/2024 11:38:07] "[33mGET / HTTP/1.1[0m" 404 -
+2024-07-25 11:38:07 [INFO] 127.0.0.1 - GET /favicon.ico - Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+2024-07-25 11:38:07 [INFO] 127.0.0.1 - - [25/Jul/2024 11:38:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-07-25 11:38:13 [INFO] 127.0.0.1 - GET /books - Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+2024-07-25 11:38:18 [INFO] 127.0.0.1 - - [25/Jul/2024 11:38:18] "GET /books HTTP/1.1" 200 -
+2024-07-25 11:40:42 [INFO] 127.0.0.1 - GET /books - Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+2024-07-25 11:40:50 [INFO] 127.0.0.1 - - [25/Jul/2024 11:40:50] "GET /books HTTP/1.1" 200 -
+2024-07-25 11:43:09 [INFO] 127.0.0.1 - GET /books - Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+2024-07-25 11:43:12 [INFO] 127.0.0.1 - - [25/Jul/2024 11:43:12] "GET /books HTTP/1.1" 200 -

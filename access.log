@@ -1,0 +1,12 @@
+2024-07-25 11:44:27 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.10.179:5000
+2024-07-25 11:44:27 [INFO] [33mPress CTRL+C to quit[0m
+2024-07-25 11:44:27 [INFO]  * Restarting with stat
+2024-07-25 11:44:37 [WARNING]  * Debugger is active!
+2024-07-25 11:44:37 [INFO]  * Debugger PIN: 848-406-356
+2024-07-25 11:44:37 [INFO] 127.0.0.1 - GET /books - Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+2024-07-25 11:45:02 [INFO] 127.0.0.1 - GET /books - Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+2024-07-25 11:45:06 [INFO] 127.0.0.1 - - [25/Jul/2024 11:45:06] "GET /books HTTP/1.1" 200 -
+2024-07-25 11:45:13 [INFO] 127.0.0.1 - - [25/Jul/2024 11:45:13] "GET /books HTTP/1.1" 200 -
