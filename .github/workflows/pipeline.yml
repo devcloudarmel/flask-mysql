@@ -24,12 +24,13 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pwd
+        source venv/bin/activate
         python -m pip install --upgrade pip
         python -m pip install -r ./app/requirements.txt
 
     - name: Print debugging information
       run: |
+        source venv/bin/activate
         echo "Python Version: $(python --version)"
         echo "Working Directory: $(pwd)"
         echo "Contents of Working Directory: $(ls -l)"
@@ -37,7 +38,13 @@ jobs:
 
     - name: Deploy Your Application
       run: |
-        # Add your deployment commands here
-        # For example, you might use a script to deploy your Flask app
-        pwd
-        python ./app/app.py
+        source venv/bin/activate
+        nohup python ./app/app.py &
+        sleep 10 # Give the server some time to start
+
+    - name: Run tests
+      run: |
+        source venv/bin/activate
+        # Add your test commands here
+        # For example, you might use curl to test your endpoints
+        curl http://localhost:5000/books
