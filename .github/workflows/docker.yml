@@ -22,8 +22,8 @@ jobs:
       - name: Docker compose
         run: sudo docker compose version
       
-      - name: Build docker image
-        run: sudo docker build -t flaskapp:latest .
+      - name: Enter dans app
+        run: cd app && sudo docker build -t flaskapp:latest .
       
       - name: Installation by defautl in Ubuntu
         run: apt list --installed
