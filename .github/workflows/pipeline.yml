@@ -2,8 +2,7 @@ name: FLASK CI
 
 on:
   pull_request:
-    types:
-      - closed
+    branches: [main]
 
 jobs:
   deploy:
@@ -26,9 +25,7 @@ jobs:
       - name: Start Flask server
         run: |
           python ./app/app.py &
-          sleep 10 # Give the server some time to start
-        env:
-          FLASK_ENV: development # Optional, if you need to set environment variables
+          sleep 10
 
       - name: Run tests
         run: |
