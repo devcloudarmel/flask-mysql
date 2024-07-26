@@ -21,9 +21,18 @@ jobs:
 
       - name: Docker compose
         run: sudo docker compose version
-      
+
+      - name: Login to Dockerhub
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+
       - name: Enter dans app
-        run: cd app && sudo docker build -t flaskapp:latest .
+        run: cd app && sudo docker build -t devcloudarmel/flaskapp:latest .
+
+      - name: Push to docker hub
+        run: docker push devcloudarmel/flaskapp:latest
       
       - name: Installation by defautl in Ubuntu
         run: apt list --installed
