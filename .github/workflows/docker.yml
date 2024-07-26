@@ -13,6 +13,9 @@ jobs:
       - name: Display
         run: echo "Welcome, Build docker image et verify if exist"
 
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Verification Doker
         run: sudo docker --version 
 
@@ -20,7 +23,7 @@ jobs:
         run: sudo docker compose version
       
       - name: Build docker image
-        run: sudo docker build -t faskapp:latest -f app/Dockerfile .
+        run: sudo docker build -t flaskapp:latest .
       
       - name: Installation by defautl in Ubuntu
         run: apt list --installed
