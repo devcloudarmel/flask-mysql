@@ -1,0 +1,28 @@
+name: Docker-install
+
+on:
+  push:
+    branches:
+      - pipeline
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display
+        run: echo "Welcome, Build docker image et verify if exist"
+
+      - name: Verification Doker
+        run: sudo docker --version 
+
+      - name: Docker compose
+        run: sudo docker compose version
+      
+      - name: Build docker image
+        run: sudo docker build -t faskapp:latest ./app/.
+      
+      - name: Installation by defautl
+        run: apt list --installed
+
+		
