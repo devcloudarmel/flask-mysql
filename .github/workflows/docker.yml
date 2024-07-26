@@ -22,5 +22,5 @@ jobs:
       - name: Build docker image
         run: sudo docker build -t faskapp:latest /app/.
       
-      - name: Installation by defautl
+      - name: Installation by defautl in Ubuntu
         run: apt list --installed
