@@ -24,5 +24,3 @@ jobs:
       
       - name: Installation by defautl
         run: apt list --installed
-
-		
